@@ -1,6 +1,9 @@
 name: AWS S3 Sync
 
-on: push
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
