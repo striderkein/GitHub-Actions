@@ -44,8 +44,9 @@ jobs:
         #  # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         #  AWS_S3_BUCKET: “test-github-actions-20200325/”
         uses: actions/aws/cli@master
+        # uses: ItsKarma/aws-cli@v1.70.0
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
-          args: s3 sync ./target/publish s3://test-github-actions-20200325 --delete
+          args: s3 sync --acl public-read --delete ./target/publish s3://test-github-actions-20200325
