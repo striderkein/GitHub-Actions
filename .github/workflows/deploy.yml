@@ -43,7 +43,7 @@ jobs:
         #  SOURCE_DIR: './target/publish'      # optional: defaults to entire repository
         #  # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         #  AWS_S3_BUCKET: “test-github-actions-20200325/”
-        # uses: actions/aws/cli@master
+        # uses: actions/aws/cli@master # <- now deleted. cf. https://github.com/aws/aws-cli/issues/4835
         uses: ItsKarma/aws-cli@v1.70.0
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
