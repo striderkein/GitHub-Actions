@@ -42,4 +42,4 @@ jobs:
           AWS_REGION: 'ap-northeast-1'   # optional: defaults to us-east-1
           SOURCE_DIR: './target/publish'      # optional: defaults to entire repository
           # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_S3_BUCKET: “s3://test-github-actions-20200325/”
+          AWS_S3_BUCKET: “test-github-actions-20200325/”
