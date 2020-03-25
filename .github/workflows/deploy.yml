@@ -17,9 +17,8 @@ jobs:
         # python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
         python-version: [3.8]
     steps:
-      - run: python
-      - run: import sys
-      - run: sys.setdefaultencoding('utf-8')
+      - name: Setup Python default encoding
+        run: python -c "import sys; sys.setdefaultencoding('utf-8')"
       - name: Checkout
         uses: actions/checkout@v1
         with:
